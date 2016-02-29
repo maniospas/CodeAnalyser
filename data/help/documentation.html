@@ -1,0 +1,30 @@
+<html>
+<h1>Problems</h1>
+<i>Code Analyser</i> manages mathematical and programming problems. Each problem is a collection of statements and can have another problem as its implementation. 
+Problems are organized into libraries.
+<h2>Managing problems</h2>
+You can manage problems from the dialog that appears by clicking on <i>Problems -> Open</i>. The same dialog can be accessed by clicking on the <i>...</i> tab. 
+From that dialog, you can also create and delete problems. For easier and faster creation of a new problem, you can also click on <i>Problems -> Create & Open</i>. 
+<p/>
+You can assign or create a problem's implementation or set its library only after you have opened the problem in a new tab.
+<h2>Implementation</h2>
+For known problems, you can assign another problem in the same library as their implementation. Otherwise, you can click the <i>Create implementation</i> 
+button that will automatically generate a solution that implements the new problem.
+<h2>Create Implementation</h2>
+Pressing the <i>Create implementation</i> button will open a dialog from which you can change the various solution options. 
+After configuring the solution generator algorithm, you can run it by clicking the <i>Run...</i> button. The options available for configuration are the following:
+<p/><b>Max iterations</b><br/>This option sets the maximum number of steps for which the algorithm is run. This limit is present in order to prevent possible infinite looping. 
+<p/><b>Conserve</b><br/>This is a constant that helps decide the importance of not generating new information. For values over 100%, the program follows Occam's Razor 
+(the simplest solution is selected). For value of 100%, the program tries to replace as much information as possible and for 0% it tries to generate as much new information 
+as possible.
+<p/><b>Multi-threaded</b><br/>If this option is enabled, the program will use the maximum possible paralization. Otherwise, only a single thread will be used.
+
+<h1>Subproblem analysis</h1>
+Subproblem analysis is the problem pre-processing before the main body of the solution generation algorithm is run. Subproblem analysis creates subproblems and de-classed
+problems (see below). You can perform and view the sybproblem analysis for an individual problem by clicking on the <i>Subproblem analysis</i> button.
+<h2>Subproblems</h2>
+Subproblems are all independent problems a bigger problem can be split into. Subproblems don't have common output variables.
+<h2>De-classed Problem</h2>
+Each problem that is a member of a function has a <i>self</i> variable. This variable usually grants access to class members. The de-classed problem essentially 
+removes all <i>self.</i> uses from the problem's statements.
+</html>
